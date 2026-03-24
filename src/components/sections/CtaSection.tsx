@@ -1,7 +1,11 @@
+import { useState } from "react"
 import { ArrowRight } from "lucide-react"
 import { LiquidCtaButton } from "@/components/buttons/LiquidCtaButton"
+import { RequestFormModal } from "@/components/RequestFormModal"
 
 export function CtaSection() {
+  const [open, setOpen] = useState(false)
+
   return (
     <section className="px-6 py-24">
       <div className="max-w-3xl mx-auto text-center">
@@ -10,11 +14,9 @@ export function CtaSection() {
           Оставьте заявку — менеджер свяжется с вами, уточнит диаметр, марку и объём, и рассчитает стоимость напрямую от производителя.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="#pricing">
-            <LiquidCtaButton>Получить прайс-лист</LiquidCtaButton>
-          </a>
+          <LiquidCtaButton onClick={() => setOpen(true)}>Получить прайс-лист</LiquidCtaButton>
           <a
-            href="#"
+            href="tel:+78001234567"
             className="group flex items-center gap-2 px-6 py-3 text-sm font-medium text-zinc-400 hover:text-zinc-100 transition-colors"
           >
             <span>Позвонить нам</span>
@@ -22,6 +24,7 @@ export function CtaSection() {
           </a>
         </div>
       </div>
+      <RequestFormModal open={open} onOpenChange={setOpen} />
     </section>
   )
 }
