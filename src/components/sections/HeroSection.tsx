@@ -1,5 +1,5 @@
 import { LiquidCtaButton } from "@/components/buttons/LiquidCtaButton"
-import { Package, ArrowRight } from "lucide-react"
+import { Zap, ArrowRight } from "lucide-react"
 
 export function HeroSection() {
   return (
@@ -11,21 +11,21 @@ export function HeroSection() {
       <div className="relative z-10 text-center max-w-3xl mx-auto">
         {/* Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-900/80 border border-zinc-800 mb-8">
-          <Package className="w-4 h-4 text-zinc-400" />
-          <span className="text-sm text-zinc-400">Поставки по всей России — от 1 кг до вагонной нормы</span>
+          <Zap className="w-4 h-4 text-zinc-400" />
+          <span className="text-sm text-zinc-400">Производство с 2005 года — прямые поставки без посредников</span>
         </div>
 
         {/* Headline */}
         <h1 className="font-display text-5xl md:text-7xl font-bold tracking-tight mb-6">
-          <span className="text-zinc-100 block">Металлопрокат</span>
+          <span className="text-zinc-100 block">Медная проволока</span>
           <span className="bg-gradient-to-r from-zinc-500 via-zinc-300 to-zinc-500 bg-clip-text text-transparent">
-            оптом и в розницу.
+            от производителя.
           </span>
         </h1>
 
         {/* Subheadline */}
         <p className="text-lg md:text-xl text-zinc-500 max-w-2xl mx-auto mb-10 leading-relaxed text-balance">
-          Проволока, метизы, крепёж и металлопрокат со склада в Москве. Широкий ассортимент, конкурентные цены и доставка в любую точку страны.
+          Медная бескислородная литая катанка и сварочная проволока диаметром от 0,1 до 8 мм. Собственное производство, лаборатория контроля качества, соответствие ГОСТ и ТУ.
         </p>
 
         {/* CTAs */}
@@ -37,7 +37,7 @@ export function HeroSection() {
             href="#features"
             className="group flex items-center gap-2 px-6 py-3 text-sm font-medium text-zinc-400 hover:text-zinc-100 transition-colors"
           >
-            <span>Смотреть продукцию</span>
+            <span>О производстве</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
           </a>
         </div>
@@ -94,7 +94,7 @@ export function HeroSection() {
                 <span className="text-zinc-400 font-medium ml-1 text-sm">5.0</span>
               </div>
               <p className="text-sm text-zinc-500">
-                Нам доверяют <span className="text-zinc-300 font-medium">500+</span> предприятий России
+                Нам доверяют <span className="text-zinc-300 font-medium">300+</span> предприятий по всей России
               </p>
             </div>
           </div>

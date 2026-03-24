@@ -2,15 +2,15 @@ import { Phone, Mail, MapPin } from "lucide-react"
 
 const footerLinks = {
   product: [
-    { label: "Продукция", href: "#features" },
-    { label: "Условия работы", href: "#pricing" },
-    { label: "Отзывы", href: "#testimonials" },
-    { label: "Доставка", href: "#" },
+    { label: "Медная катанка", href: "#pricing" },
+    { label: "Медная проволока", href: "#pricing" },
+    { label: "Сварочная проволока", href: "#pricing" },
+    { label: "Производство под заказ", href: "#pricing" },
   ],
   company: [
-    { label: "О компании", href: "#" },
-    { label: "Сертификаты", href: "#" },
-    { label: "Вакансии", href: "#" },
+    { label: "О производстве", href: "#features" },
+    { label: "Лаборатория качества", href: "#features" },
+    { label: "Отзывы клиентов", href: "#testimonials" },
     { label: "Контакты", href: "#" },
   ],
   legal: [
@@ -28,10 +28,10 @@ export function FooterSection() {
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <a href="/" className="font-display text-xl font-semibold text-zinc-100">
-              Металлор
+              Медная катанка и проволока
             </a>
             <p className="mt-4 text-sm text-zinc-500 max-w-xs">
-              Металлопрокат, проволока и метизы оптом и в розницу. Поставки по всей России.
+              Производство медной бескислородной катанки и проволоки с 2005 года. Прямые поставки от завода-изготовителя.
             </p>
             <div className="mt-4 space-y-2">
               <div className="flex items-center gap-2 text-sm text-zinc-500">
@@ -94,7 +94,7 @@ export function FooterSection() {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-zinc-900 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-zinc-600">© {new Date().getFullYear()} Металлор. Все права защищены.</p>
+          <p className="text-sm text-zinc-600">© {new Date().getFullYear()} Медная катанка и проволока от производителя. Все права защищены.</p>
           <div className="flex items-center gap-4">
             <a href="#" className="text-zinc-500 hover:text-zinc-300 transition-colors" aria-label="ВКонтакте">
               <Phone className="w-5 h-5" />

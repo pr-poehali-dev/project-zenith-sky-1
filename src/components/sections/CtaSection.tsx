@@ -5,9 +5,9 @@ export function CtaSection() {
   return (
     <section className="px-6 py-24">
       <div className="max-w-3xl mx-auto text-center">
-        <h2 className="font-display text-4xl md:text-5xl font-bold text-zinc-100 mb-6">Нужен металлопрокат?</h2>
+        <h2 className="font-display text-4xl md:text-5xl font-bold text-zinc-100 mb-6">Нужна медная проволока или катанка?</h2>
         <p className="text-lg text-zinc-500 mb-10 text-balance">
-          Оставьте заявку — менеджер свяжется в течение 15 минут, подберёт нужные позиции и рассчитает стоимость с доставкой.
+          Оставьте заявку — менеджер свяжется с вами, уточнит диаметр, марку и объём, и рассчитает стоимость напрямую от производителя.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a href="#pricing">

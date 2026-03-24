@@ -4,14 +4,14 @@ import { Card, CardContent } from "@/components/ui/card"
 import Icon from "@/components/ui/icon"
 
 const productCategories = [
-  { name: "Проволока стальная" },
-  { name: "Проволока вязальная" },
-  { name: "Гвозди строительные" },
-  { name: "Болты и гайки" },
-  { name: "Сетка сварная" },
-  { name: "Шурупы и саморезы" },
-  { name: "Скобы монтажные" },
-  { name: "Хомуты стальные" },
+  { name: "Катанка медная ø6–8 мм" },
+  { name: "Проволока ø0,1–1 мм" },
+  { name: "Проволока ø1–3 мм" },
+  { name: "Проволока ø3–8 мм" },
+  { name: "Сварочная проволока" },
+  { name: "Обмоточная проволока" },
+  { name: "Коллекторная медь" },
+  { name: "Под заказ любой ø" },
 ]
 
 export function FeaturesSection() {
@@ -26,12 +26,12 @@ export function FeaturesSection() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <p className="text-sm font-medium text-zinc-500 uppercase tracking-wider mb-4">Наши преимущества</p>
+          <p className="text-sm font-medium text-zinc-500 uppercase tracking-wider mb-4">О производстве</p>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-zinc-100 mb-4">
-            Всё для вашего производства
+            Собственное производство — наше главное преимущество
           </h2>
           <p className="text-zinc-500 max-w-xl mx-auto text-balance">
-            Широкий ассортимент металлопроката и метизов — со склада или под заказ.
+            С 2005 года специализируемся на переработке цветных металлов. Собственные установки непрерывного литья и оборудование грубого волочения позволяют полностью контролировать качество.
           </p>
         </motion.div>
 
@@ -54,10 +54,10 @@ export function FeaturesSection() {
                   >
                     <Package className="w-5 h-5 text-zinc-400 group-hover:text-zinc-200 transition-colors" />
                   </motion.div>
-                  <p className="font-heading font-semibold text-zinc-100">Собственный склад в Москве</p>
+                  <p className="font-heading font-semibold text-zinc-100">Установки непрерывного литья</p>
                 </div>
                 <p className="text-zinc-500 text-sm mb-5">
-                  Более 1 000 позиций в наличии. Отгрузка в день заказа.
+                  Собственные линии непрерывного литья и грубого волочения. Производим медную бескислородную катанку и тянем проволоку диаметром от 0,1 до 8 мм.
                 </p>
                 <div className="rounded-xl border border-zinc-800 bg-zinc-950 p-4 overflow-hidden">
                   <div className="flex items-center justify-between mb-4">
@@ -92,9 +92,9 @@ export function FeaturesSection() {
                   {/* Metrics row */}
                   <div className="grid grid-cols-3 gap-3 mb-4">
                     {[
-                      { label: "Позиций в наличии", value: "1 000+", change: "всегда" },
-                      { label: "Клиентов", value: "500+", change: "+15%" },
-                      { label: "Отгрузок в день", value: "50+", change: "ежедневно" },
+                      { label: "Лет на рынке", value: "20+", change: "с 2005 г." },
+                      { label: "Клиентов", value: "300+", change: "предприятий" },
+                      { label: "Диаметры (мм)", value: "0,1–8", change: "под заказ" },
                     ].map((metric, i) => (
                       <motion.div
                         key={metric.label}
@@ -162,9 +162,9 @@ export function FeaturesSection() {
                   >
                     <Truck className="w-5 h-5 text-zinc-400 group-hover:text-zinc-200 transition-colors" />
                   </motion.div>
-                  <p className="font-heading font-semibold text-zinc-100">Доставка по России</p>
+                  <p className="font-heading font-semibold text-zinc-100">Сжатые сроки выполнения</p>
                 </div>
-                <p className="text-zinc-500 text-sm mb-5">Автотранспортом, ЖД и транспортными компаниями.</p>
+                <p className="text-zinc-500 text-sm mb-5">Гибкое ценообразование, прямые поставки от завода-изготовителя без посредников.</p>
                 <div className="mt-auto">
                   <div className="flex items-baseline gap-2 mb-3">
                     <motion.span
@@ -173,9 +173,9 @@ export function FeaturesSection() {
                       whileInView={{ opacity: 1 }}
                       viewport={{ once: true }}
                     >
-                      1 день
+                      от завода
                     </motion.span>
-                    <span className="text-zinc-500 text-sm">по Москве</span>
+                    <span className="text-zinc-500 text-sm">напрямую</span>
                   </div>
                   <div className="h-2 bg-zinc-800 rounded-full overflow-hidden">
                     <motion.div
@@ -208,9 +208,9 @@ export function FeaturesSection() {
                   >
                     <ShieldCheck className="w-5 h-5 text-zinc-400 group-hover:text-zinc-200 transition-colors" />
                   </motion.div>
-                  <p className="font-heading font-semibold text-zinc-100">Сертифицированная продукция</p>
+                  <p className="font-heading font-semibold text-zinc-100">Собственная лаборатория</p>
                 </div>
-                <p className="text-zinc-500 text-sm mb-5">Все товары сопровождаются сертификатами качества и паспортами.</p>
+                <p className="text-zinc-500 text-sm mb-5">Серийный выпуск по ГОСТ и ТУ. Каждая партия проходит проверку — только качественное сырьё марки М1.</p>
                 <div className="flex justify-center gap-2 mt-auto">
                   {["ГОСТ", "ТУ", "ISO"].map((key, i) => (
                     <motion.div
@@ -252,9 +252,9 @@ export function FeaturesSection() {
                   >
                     <Layers className="w-5 h-5 text-zinc-400 group-hover:text-zinc-200 transition-colors" />
                   </motion.div>
-                  <p className="font-heading font-semibold text-zinc-100">Широкий ассортимент</p>
+                  <p className="font-heading font-semibold text-zinc-100">Ассортимент продукции</p>
                 </div>
-                <p className="text-zinc-500 text-sm mb-5">Проволока, метизы, крепёж и металлопрокат — всё в одном месте.</p>
+                <p className="text-zinc-500 text-sm mb-5">Медная проволока любого диаметра для электроэнергетики, машиностроения, сварки и перемотки электродвигателей.</p>
                 <div className="grid grid-cols-4 gap-2 mt-auto">
                   {productCategories.map((cat, i) => (
                     <motion.div
