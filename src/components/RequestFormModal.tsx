@@ -50,9 +50,7 @@ export function RequestFormModal({ open, onOpenChange }: RequestFormModalProps) 
     e.preventDefault()
     setStatus("loading")
     try {
-      const func2url = await import("../../func2url.json")
-      const url = func2url["submit-request"]
-      const res = await fetch(url, {
+      const res = await fetch("https://functions.poehali.dev/958c16ad-19a2-4dd2-9b2f-13390554ae56", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
