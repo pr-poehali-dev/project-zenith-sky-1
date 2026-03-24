@@ -1,16 +1,17 @@
 import { motion } from "framer-motion"
-import { Zap, BarChart3, Layers, ArrowRight, Command } from "lucide-react"
+import { Truck, ShieldCheck, Layers, ArrowRight, Package } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
+import Icon from "@/components/ui/icon"
 
-const integrationLogos = [
-  { name: "Tool 1" },
-  { name: "Tool 2" },
-  { name: "Tool 3" },
-  { name: "Tool 4" },
-  { name: "Tool 5" },
-  { name: "Tool 6" },
-  { name: "Tool 7" },
-  { name: "Tool 8" },
+const productCategories = [
+  { name: "Проволока стальная" },
+  { name: "Проволока вязальная" },
+  { name: "Гвозди строительные" },
+  { name: "Болты и гайки" },
+  { name: "Сетка сварная" },
+  { name: "Шурупы и саморезы" },
+  { name: "Скобы монтажные" },
+  { name: "Хомуты стальные" },
 ]
 
 export function FeaturesSection() {
@@ -25,17 +26,17 @@ export function FeaturesSection() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <p className="text-sm font-medium text-zinc-500 uppercase tracking-wider mb-4">Функции</p>
+          <p className="text-sm font-medium text-zinc-500 uppercase tracking-wider mb-4">Наши преимущества</p>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-zinc-100 mb-4">
-            Все для вашего успеха
+            Всё для вашего производства
           </h2>
           <p className="text-zinc-500 max-w-xl mx-auto text-balance">
-            Мощные инструменты, которые помогут выпускать продукты быстрее.
+            Широкий ассортимент металлопроката и метизов — со склада или под заказ.
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-5 gap-3">
-          {/* Card 1 - Analytics (wider - 3 cols) */}
+          {/* Card 1 - Большой склад (wider - 3 cols) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -51,12 +52,12 @@ export function FeaturesSection() {
                     whileHover={{ rotate: [0, -10, 10, 0] }}
                     transition={{ duration: 0.5 }}
                   >
-                    <BarChart3 className="w-5 h-5 text-zinc-400 group-hover:text-zinc-200 transition-colors" />
+                    <Package className="w-5 h-5 text-zinc-400 group-hover:text-zinc-200 transition-colors" />
                   </motion.div>
-                  <p className="font-heading font-semibold text-zinc-100">Дашборд в реальном времени</p>
+                  <p className="font-heading font-semibold text-zinc-100">Собственный склад в Москве</p>
                 </div>
                 <p className="text-zinc-500 text-sm mb-5">
-                  Отслеживайте важные метрики с настраиваемыми панелями.
+                  Более 1 000 позиций в наличии. Отгрузка в день заказа.
                 </p>
                 <div className="rounded-xl border border-zinc-800 bg-zinc-950 p-4 overflow-hidden">
                   <div className="flex items-center justify-between mb-4">
@@ -74,7 +75,7 @@ export function FeaturesSection() {
                         transition={{ delay: 0.5 }}
                       >
                         <div className="w-2 h-2 rounded-full bg-zinc-400" />
-                        <span className="text-xs text-zinc-500">Пользователи</span>
+                        <span className="text-xs text-zinc-500">Позиции</span>
                       </motion.div>
                       <motion.div
                         className="flex items-center gap-1.5"
@@ -84,16 +85,16 @@ export function FeaturesSection() {
                         transition={{ delay: 0.6 }}
                       >
                         <div className="w-2 h-2 rounded-full bg-zinc-600" />
-                        <span className="text-xs text-zinc-500">Выручка</span>
+                        <span className="text-xs text-zinc-500">Отгрузки</span>
                       </motion.div>
                     </div>
                   </div>
-                  {/* Animated metrics row */}
+                  {/* Metrics row */}
                   <div className="grid grid-cols-3 gap-3 mb-4">
                     {[
-                      { label: "Пользователи", value: "12,4 тыс", change: "+12%" },
-                      { label: "Выручка", value: "4,8 млн ₽", change: "+8%" },
-                      { label: "Конверсия", value: "3,2%", change: "+2%" },
+                      { label: "Позиций в наличии", value: "1 000+", change: "всегда" },
+                      { label: "Клиентов", value: "500+", change: "+15%" },
+                      { label: "Отгрузок в день", value: "50+", change: "ежедневно" },
                     ].map((metric, i) => (
                       <motion.div
                         key={metric.label}
@@ -117,7 +118,7 @@ export function FeaturesSection() {
                       </motion.div>
                     ))}
                   </div>
-                  {/* Animated bar chart */}
+                  {/* Bar chart */}
                   <div className="flex items-end gap-1.5 h-16">
                     {[35, 55, 40, 75, 50, 85, 60, 70, 45, 90, 65, 80].map((h, i) => (
                       <motion.div
@@ -131,7 +132,6 @@ export function FeaturesSection() {
                       />
                     ))}
                   </div>
-                  {/* Animated line underneath */}
                   <motion.div
                     className="h-px bg-gradient-to-r from-transparent via-zinc-600 to-transparent mt-3"
                     initial={{ scaleX: 0 }}
@@ -144,7 +144,7 @@ export function FeaturesSection() {
             </Card>
           </motion.div>
 
-          {/* Card 2 - Performance (narrower - 2 cols) */}
+          {/* Card 2 - Быстрая доставка (narrower - 2 cols) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -160,11 +160,11 @@ export function FeaturesSection() {
                     animate={{ scale: [1, 1.1, 1] }}
                     transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                   >
-                    <Zap className="w-5 h-5 text-zinc-400 group-hover:text-zinc-200 transition-colors" />
+                    <Truck className="w-5 h-5 text-zinc-400 group-hover:text-zinc-200 transition-colors" />
                   </motion.div>
-                  <p className="font-heading font-semibold text-zinc-100">Молниеносная скорость</p>
+                  <p className="font-heading font-semibold text-zinc-100">Доставка по России</p>
                 </div>
-                <p className="text-zinc-500 text-sm mb-5">Оптимизировано для скорости на любом масштабе.</p>
+                <p className="text-zinc-500 text-sm mb-5">Автотранспортом, ЖД и транспортными компаниями.</p>
                 <div className="mt-auto">
                   <div className="flex items-baseline gap-2 mb-3">
                     <motion.span
@@ -173,15 +173,15 @@ export function FeaturesSection() {
                       whileInView={{ opacity: 1 }}
                       viewport={{ once: true }}
                     >
-                      99.9%
+                      1 день
                     </motion.span>
-                    <span className="text-zinc-500 text-sm">аптайм</span>
+                    <span className="text-zinc-500 text-sm">по Москве</span>
                   </div>
                   <div className="h-2 bg-zinc-800 rounded-full overflow-hidden">
                     <motion.div
                       className="h-full bg-gradient-to-r from-zinc-500 to-zinc-300 rounded-full"
                       initial={{ width: "0%" }}
-                      whileInView={{ width: "99.9%" }}
+                      whileInView={{ width: "95%" }}
                       viewport={{ once: true }}
                       transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
                     />
@@ -191,7 +191,7 @@ export function FeaturesSection() {
             </Card>
           </motion.div>
 
-          {/* Card 3 - Keyboard shortcuts (narrower - 2 cols) */}
+          {/* Card 3 - Сертификаты (narrower - 2 cols) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -206,16 +206,16 @@ export function FeaturesSection() {
                     className="w-10 h-10 rounded-xl bg-zinc-800 flex items-center justify-center"
                     whileHover={{ y: -2 }}
                   >
-                    <Command className="w-5 h-5 text-zinc-400 group-hover:text-zinc-200 transition-colors" />
+                    <ShieldCheck className="w-5 h-5 text-zinc-400 group-hover:text-zinc-200 transition-colors" />
                   </motion.div>
-                  <p className="font-heading font-semibold text-zinc-100">Сначала клавиатура</p>
+                  <p className="font-heading font-semibold text-zinc-100">Сертифицированная продукция</p>
                 </div>
-                <p className="text-zinc-500 text-sm mb-5">Любое действие на расстоянии одной клавиши.</p>
+                <p className="text-zinc-500 text-sm mb-5">Все товары сопровождаются сертификатами качества и паспортами.</p>
                 <div className="flex justify-center gap-2 mt-auto">
-                  {["Cmd", "K"].map((key, i) => (
+                  {["ГОСТ", "ТУ", "ISO"].map((key, i) => (
                     <motion.div
                       key={key}
-                      className="flex items-center justify-center w-12 h-12 rounded-xl bg-zinc-800/80 border border-zinc-700/50 shadow-lg"
+                      className="flex items-center justify-center px-4 h-12 rounded-xl bg-zinc-800/80 border border-zinc-700/50 shadow-lg"
                       initial={{ y: 0 }}
                       animate={{ y: [0, -4, 0] }}
                       transition={{
@@ -226,7 +226,7 @@ export function FeaturesSection() {
                       }}
                       whileHover={{ scale: 1.1, y: -4 }}
                     >
-                      <span className="text-zinc-300 font-mono text-lg">{key}</span>
+                      <span className="text-zinc-300 font-mono text-sm font-semibold">{key}</span>
                     </motion.div>
                   ))}
                 </div>
@@ -234,7 +234,7 @@ export function FeaturesSection() {
             </Card>
           </motion.div>
 
-          {/* Card 4 - Integrations (wider - 3 cols) */}
+          {/* Card 4 - Ассортимент (wider - 3 cols) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -252,21 +252,21 @@ export function FeaturesSection() {
                   >
                     <Layers className="w-5 h-5 text-zinc-400 group-hover:text-zinc-200 transition-colors" />
                   </motion.div>
-                  <p className="font-heading font-semibold text-zinc-100">100+ интеграций</p>
+                  <p className="font-heading font-semibold text-zinc-100">Широкий ассортимент</p>
                 </div>
-                <p className="text-zinc-500 text-sm mb-5">Подключайте инструменты, которыми пользуетесь ежедневно.</p>
-                <div className="grid grid-cols-8 gap-2 mt-auto">
-                  {integrationLogos.map((logo, i) => (
+                <p className="text-zinc-500 text-sm mb-5">Проволока, метизы, крепёж и металлопрокат — всё в одном месте.</p>
+                <div className="grid grid-cols-4 gap-2 mt-auto">
+                  {productCategories.map((cat, i) => (
                     <motion.div
-                      key={logo.name}
+                      key={cat.name}
                       initial={{ opacity: 0, y: 10 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.3, delay: 0.3 + i * 0.05 }}
-                      whileHover={{ scale: 1.15, y: -2 }}
-                      className="aspect-square rounded-lg border border-zinc-800 bg-zinc-800/50 flex items-center justify-center cursor-pointer"
+                      whileHover={{ scale: 1.03, y: -2 }}
+                      className="rounded-lg border border-zinc-800 bg-zinc-800/50 flex items-center justify-center cursor-pointer p-2"
                     >
-                      <div className="w-5 h-5 rounded bg-zinc-700" />
+                      <span className="text-zinc-400 text-xs text-center leading-tight">{cat.name}</span>
                     </motion.div>
                   ))}
                 </div>
@@ -274,7 +274,7 @@ export function FeaturesSection() {
                   whileHover={{ x: 6 }}
                   className="mt-4 flex items-center gap-1.5 text-sm text-zinc-500 hover:text-zinc-300 transition-colors"
                 >
-                  Все интеграции <ArrowRight className="w-4 h-4" />
+                  Весь каталог <ArrowRight className="w-4 h-4" />
                 </motion.button>
               </CardContent>
             </Card>
